@@ -13,6 +13,18 @@ This project showcases a modern blog layout with dynamic interactions and user-f
   - Dynamic comment count update
 - Horizontal card layout (similar to Dev.to style)
 - Smooth animations and transitions
+  
+## 🛠️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **Vanilla JavaScript (ES6+)**
+
+## 💡 How to Use
+
+1. Clone the repository or download the ZIP.
+2. Open `index.html` in any browser.
+3. Explore the blog UI and interact with the comment section.
 
 ## 🖼️ Screenshots
 
@@ -25,14 +37,3 @@ This project showcases a modern blog layout with dynamic interactions and user-f
 ### 💬 Comment Section  
 ![image](https://github.com/user-attachments/assets/42c4173a-d1a3-439f-8ed0-f847a5c1dbb1)
 
-## 🛠️ Tech Stack
-
-- **HTML5**
-- **CSS3**
-- **Vanilla JavaScript (ES6+)**
-
-## 💡 How to Use
-
-1. Clone the repository or download the ZIP.
-2. Open `index.html` in any browser.
-3. Explore the blog UI and interact with the comment section.
