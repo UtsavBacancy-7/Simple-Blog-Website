@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/HTML/db-favicon.svg">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/dashboard.css">
+</head>
+
+<body>
+
+    <header class="header-bar">
+        <!-- Left: Logo and Search -->
+        <div class="header-left">
+            <div class="devlog-style">Devblog</div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search" onkeyup="filterBlogs()">
+            </div>
+        </div>
+
+        <!-- Right: User info & Logout -->
+        <div class="header-right">
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </span>
+            </label>
+            <i class="fas fa-user-circle user-icon" title="Profile"></i>
+            <span id="userName" class="username"></span>
+            <i class="fas fa-sign-out-alt logout-icon" onclick="logoutUser()" title="Logout"></i>
+        </div>
+    </header>
+
+    <!-- Blog List Section -->
+    <section class="blogs-content">
+        <div id="blogsList"></div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-overlay"></div> <!-- This is the overlay for the background blur -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- <img id="modalImage" class="modal-image" /> -->
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+            <div><strong><i class="fas fa-comments"></i> <span id="commentCount">0</span> Comments</strong></div>
+
+            <div id="commentsList" class="comments">
+                <div class="comment" id="comment-0">
+                    <p class="comment-text" id="comment-text-0">This is a sample comment.</p>
+                    <button onclick="editComment(0)">Edit</button>
+                </div>
+                <!-- More comments will be dynamically generated here -->
+            </div>
+
+            <div class="comment-form">
+                <textarea id="newComment" placeholder="Add your comment..."></textarea>
+                <button onclick="addComment()">Post Comment</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/JS/blogs.js"></script>
+    <script src="/JS/blogData.js"></script>
+    <script src="/JS/dashboard.js"></script>
+
+</body>
+</html>

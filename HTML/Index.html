@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="icon" type="image/svg+xml" href="/HTML/db-favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/CSS/style.css" />
+  <link rel="stylesheet" href="/CSS/index.css">
+</head>
+<body>
+
+  <header>
+    <div class="devlog-style">Devblog</div>
+    <nav>
+      <ul>
+        <li>Our Story</li>
+        <li>Write</li>
+        <li id="sign-in">Sign in</li>
+      </ul>
+    </nav>
+    <div class="started-button" id="get-started">Get Started</div>
+  </header>
+
+  <section class="main-content">
+    <div class="main-text">
+      <h1>One Mind, <br>Infinite Possibilities</h1>
+      <p>Explore new ideas, express your thoughts, and be part of a limitless creative journey.</p>
+      <button class="start-reading" id="start-reading">Start reading</button>
+    </div>
+    <img src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" alt="Creative Illustration" />
+  </section>
+
+  <footer>
+    <ul>
+      <li>Help</li>
+      <li>Status</li>
+      <li>About</li>
+      <li>Career</li>
+      <li>Press</li>
+      <li>Blog</li>
+      <li>Privacy</li>
+      <li>Rules</li>
+      <li>Terms</li>
+      <li>Text to speech</li>
+    </ul>
+  </footer>
+
+  <!-- Login Form Modal -->
+  <div id="login-form" class="login-form">
+    <div class="login-model">
+      <span id="close-form" class="close-btn">&times;</span>
+      <h2>Login</h2>
+      <input id="email" type="email" placeholder="Email" /><br>
+      <input id="password" type="password" placeholder="Password" /><br>
+      <button onclick="loginUser()">Login</button>
+    </div>
+  </div>
+
+  <!-- Spinner Wrapper -->
+  <div id="spinner" class="spinner-container" style="display: none;">
+    <div class="spinner"></div>
+    <p>Logging in...</p>
+  </div>
+
+  <script src="/JS/formOpening.js"></script>
+  <script src="/JS/authentication.js"></script>
+</body>
+
+</html>
