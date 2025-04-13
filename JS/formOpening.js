@@ -38,3 +38,14 @@ window.addEventListener('click', (event) => {
     closeLoginForm();
   }
 });
+
+// Mobile Navigation Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("nav-toggle");
+  const navList = document.querySelector("nav ul");
+
+  toggleBtn.addEventListener("click", () => {
+    navList.classList.toggle("nav-active");
+  });
+});
+
