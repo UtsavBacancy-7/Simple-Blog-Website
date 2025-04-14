@@ -28,10 +28,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload static site
+      - name: Upload static site from HTML folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  
+          path: './HTML'  
 
       - name: Deploy to GitHub Pages
         id: deployment
