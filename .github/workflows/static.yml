@@ -1,13 +1,8 @@
-# .github/workflows/static.yml
-
 name: DevBlog
 
 on:
-  # Runs on pushes to main branch
   push:
     branches: ["main"]
-
-  # Allows manual run
   workflow_dispatch:
 
 permissions:
@@ -25,17 +20,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'HTML'  # 👈 Points to your HTML folder where Index.html is
+          path: '.'  
 
       - name: Deploy to GitHub Pages
         id: deployment
