@@ -15,7 +15,7 @@ function renderBlogs() {
         // Handle blog content truncation if too long
         const content = blog.content && blog.content.length > 150
             ? `${blog.content.substring(0, 150)}... <span class="read-more">Read more</span>`
-            : blog.content || ''; // Default to empty string if content missing
+            : blog.content || '';
 
         // Blog card template
         blogCard.innerHTML = `
