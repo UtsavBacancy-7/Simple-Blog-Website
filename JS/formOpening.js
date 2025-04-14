@@ -30,22 +30,4 @@ getStartedBtn.addEventListener('click', openLoginForm);
 startReadingBtn.addEventListener('click', openLoginForm);
 
 // Attach event listener to close button to hide login form
-closeFormBtn.addEventListener('click', closeLoginForm);
-
-// Close the login form when clicking outside the form container
-window.addEventListener('click', (event) => {
-  if (event.target === loginForm) {
-    closeLoginForm();
-  }
-});
-
-// Mobile Navigation Toggle
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("nav-toggle");
-  const navList = document.querySelector("nav ul");
-
-  toggleBtn.addEventListener("click", () => {
-    navList.classList.toggle("nav-active");
-  });
-});
-
+closeFormBtn.addEventListener('click', closeLoginForm);   

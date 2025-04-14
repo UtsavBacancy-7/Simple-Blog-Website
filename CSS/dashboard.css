@@ -244,13 +244,11 @@ body {
     height: 35px;
     font-size: 22px;
     color: #333;
-    background-color: #fff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     text-align: center;
     line-height: 35px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
 }
 
@@ -508,4 +506,52 @@ body.dark-mode {
 .dark-mode #blogsList::-webkit-scrollbar-thumb {
     background-color: #555;
     border: 2px solid #2d2d2d;
+}
+
+@media (max-width: 768px) {
+    .header-bar{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .devlog-style{
+        margin-bottom: 10px;
+    }
+
+    .header-left{
+        order:2;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .header-right{
+        order: 1;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .blog-card{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog-card img{
+        order: 1;
+    }
+
+    .blog-card .blog-details{
+        order: 2;
+        text-align: center;
+    }
+
+    .close{
+        top: 10px;
+    }
+
+    #modalTitle{
+        font-size: 25px;
+        margin: 20px 0;
+    }
 }

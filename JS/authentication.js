@@ -30,7 +30,6 @@ function loginUser() {
   }
 }
 
-
 // Run this once to store users in localStorage
 const usersData = [
   {

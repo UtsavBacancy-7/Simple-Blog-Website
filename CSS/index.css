@@ -44,16 +44,6 @@ nav ul li:hover {
   color: #000;
 }
 
-/* Toggle button styles */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #0A0908;
-  cursor: pointer;
-}
-
 .started-button {
   letter-spacing: 1px;
   margin-left: 24px;
@@ -153,48 +143,6 @@ footer ul li:hover {
   color: #000;
 }
 
-/* Optional: Responsive Design */
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .main-text,
-  .main-content img {
-    width: 100%;
-  }
-
-  .main-content img {
-    position: static;
-    margin-top: 20px;
-  }
-
-  header {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* Login Form Styles */
-#login-form {
-  display: none;
-  /* This hides it initially */
-  position: fixed;
-  top: 160px;
-  left: 450px;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
 
 .blur {
   filter: blur(5px);
@@ -231,6 +179,18 @@ footer ul li:hover {
   background-color: #ccc;
 }
 
+
+/* Login Form Styles */
+#login-form {
+  display: none;
+  position: fixed;
+  top: 160px;
+  left: 450px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
 .login-form {
   background-color: #fff;
@@ -314,53 +274,48 @@ footer ul li:hover {
 }
 
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  nav ul {
-    flex-direction: column;
-    background-color: #EAE0D5;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    display: none;
-    padding: 20px;
-    gap: 12px;
-    z-index: 9;
-  }
-
-  nav ul.nav-active {
-    display: flex;
+  html {
+    width: 100%;
+    overflow-x: hidden;
   }
 
   header {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .started-button {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .main-content {
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    gap: 16px;
     padding: 20px;
   }
 
-  .main-text h1 {
-    font-size: 36px; /* Reduced size for mobile */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
   }
-  
-  .main-content img {
+
+  .started-button {
     width: 100%;
-    position: static;
-    transform: none;
-    margin-top: 20px;
+    max-width: 250px;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    margin: 10px auto 0 auto;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
   }
 
   .main-text {
@@ -368,8 +323,54 @@ footer ul li:hover {
     margin-bottom: 40px;
   }
 
+  .main-text h1 {
+    font-size: 36px; /* Reduced size for mobile */
+  }
+
+  .main-content img {
+    width: 100%;
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
   footer {
     position: relative;
     margin-top: auto;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  #login-form {
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login-model h2{
+    font-size: 20px;
+  }
+
+  .login-model input{
+    width: auto;
+  }
+
+  .login-form button{
+    width: 50%;
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .spinner-container {
+    padding: 1rem;
+    top: 50%
   }
 }

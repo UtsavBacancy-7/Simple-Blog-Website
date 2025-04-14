@@ -17,9 +17,6 @@ function renderBlogs() {
             ? `${blog.content.substring(0, 150)}... <span class="read-more">Read more</span>`
             : blog.content || ''; // Default to empty string if content missing
 
-        // Set heart icon based on favorite status
-        const isFavorite = blog.isFavorite ? 'fas fa-heart' : 'far fa-heart';
-
         // Blog card template
         blogCard.innerHTML = `
             <div class="blog-details">
@@ -30,9 +27,6 @@ function renderBlogs() {
                 </div>
             </div>
             <img src="${blog.image}" alt="${blog.title}" class="blog-image">
-            <div class="favorite-icon">
-                <i class="${isFavorite}" title="Add to Favorites" onclick="toggleFavorite(${blogsData.indexOf(blog)})"></i>
-            </div>
         `;
 
         // Attach "Read more" event if needed
@@ -46,14 +40,6 @@ function renderBlogs() {
 
         blogsList.appendChild(blogCard); // Add blog card to list
     });
-}
-
-// Toggle favorite status
-function toggleFavorite(index) {
-    const blog = blogsData[index];
-    blog.isFavorite = !blog.isFavorite; // Flip the favorite state
-    renderBlogs(); // Re-render to update icon
-    saveBlogsData(); // Save updated data
 }
 
 // Open modal to show full blog and comments
