@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setUserData(loggedInUser);
     } else {
         // If no logged-in user is found, redirect to the login page
-        window.location.href = "/HTML/Index.html";
+        window.location.href = "/HTML/index.html";
     }
 });
 
@@ -25,12 +25,12 @@ function logoutUser() {
     sessionStorage.setItem("loggedOut", "true");
 
     // Redirect to the login page
-    window.location.href = "/HTML/Index.html";
+    window.location.href = "/HTML/index.html";
 }
 
 // Prevent navigating back to the dashboard after logout
 if (sessionStorage.getItem("loggedOut") === "true") {
-    window.location.href = "/HTML/Index.html"; // Redirect if logged out
+    window.location.href = "/HTML/index.html"; // Redirect if logged out
 }
 
 // Prevent caching of the dashboard page to avoid back navigation issues
