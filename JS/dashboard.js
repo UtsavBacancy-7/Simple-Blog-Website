@@ -43,6 +43,7 @@ window.history.pushState(null, "", window.location.href);
 window.onpopstate = function () {
     window.history.pushState(null, "", window.location.href);
 };
+
 // Theme toggle functionality
 function toggleTheme() {
     const body = document.body;

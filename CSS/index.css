@@ -143,7 +143,6 @@ footer ul li:hover {
   color: #000;
 }
 
-
 .blur {
   filter: blur(5px);
   transition: filter 0.3s ease;
@@ -178,7 +177,6 @@ footer ul li:hover {
 .close-btn:hover {
   background-color: #ccc;
 }
-
 
 /* Login Form Styles */
 #login-form {
@@ -324,7 +322,8 @@ footer ul li:hover {
   }
 
   .main-text h1 {
-    font-size: 36px; /* Reduced size for mobile */
+    font-size: 36px;
+    /* Reduced size for mobile */
   }
 
   .main-content img {
@@ -355,15 +354,15 @@ footer ul li:hover {
     transform: translate(-50%, -50%);
   }
 
-  .login-model h2{
+  .login-model h2 {
     font-size: 20px;
   }
 
-  .login-model input{
+  .login-model input {
     width: auto;
   }
 
-  .login-form button{
+  .login-form button {
     width: 50%;
     padding: 6px;
     font-size: 14px;

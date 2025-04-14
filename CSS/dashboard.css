@@ -48,8 +48,6 @@ body {
     width: 100%;
 }
 
-
-
 .search-box i {
     color: #888;
     margin-right: 8px;
@@ -169,7 +167,6 @@ body {
     gap: 5px;
 }
 
-
 /* Scrollbars */
 #blogsList::-webkit-scrollbar {
     width: 10px;
@@ -269,8 +266,7 @@ body {
 }
 
 /* Content and Comments */
-h2,
-p {
+h2, p {
     font-family: 'Arial', sans-serif;
     margin: 10px 0;
 }
