@@ -28,10 +28,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload full site preserving structure
+      - name: Upload full site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # 👈 Upload entire repo including HTML, CSS, JS folders
+          path: '.'  # Upload everything including HTML, CSS, JS
 
       - name: Deploy to GitHub Pages
         id: deployment
